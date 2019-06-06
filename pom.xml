@@ -12,6 +12,7 @@
         <module>spider-base</module>
         <module>spider-ent-163-com</module>
         <module>spider-distributed</module>
+        <module>search-lucene</module>
     </modules>
 
 </project>
