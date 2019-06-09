@@ -21,11 +21,12 @@ import java.io.IOException;
  * @Date:2019/6/6 15:46
  * @Version 1.0
  */
+@SuppressWarnings("all")
 public class IndexSearcherTest {
     // lucene的索引查询代码
     public static void main(String[] args) throws IOException, ParseException {
         //创建索引查询对象
-        DirectoryReader reader = DirectoryReader.open(FSDirectory.open(new File("D:\\index")));
+        DirectoryReader reader = DirectoryReader.open(FSDirectory.open(new File("E:\\index")));
         IndexSearcher indexSearcher = new IndexSearcher(reader);
 
         //添加查询的条件
@@ -59,7 +60,7 @@ public class IndexSearcherTest {
 
     //将查询方法抽取出来
     public void publicQuery(Query query) throws IOException {
-        DirectoryReader reader = DirectoryReader.open(FSDirectory.open(new File("D:\\index")));
+        DirectoryReader reader = DirectoryReader.open(FSDirectory.open(new File("E:\\index")));
         IndexSearcher indexSearcher = new IndexSearcher(reader);
 
         TopDocs topDocs = indexSearcher.search(query, Integer.MAX_VALUE);

@@ -13,6 +13,7 @@
         <module>spider-ent-163-com</module>
         <module>spider-distributed</module>
         <module>search-lucene</module>
+        <module>search-solr</module>
     </modules>
 
 </project>
