@@ -14,6 +14,7 @@
         <module>spider-distributed</module>
         <module>search-lucene</module>
         <module>search-solr</module>
+        <module>search-solrcloud</module>
     </modules>
 
 </project>
