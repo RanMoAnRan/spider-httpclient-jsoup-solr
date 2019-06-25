@@ -29,6 +29,7 @@ public class News163Spider {
     //创建idworker对象
     private static IdWorker idWorker = new IdWorker(0, 0);
 
+
     public static void main(String[] args) throws IOException {
 
         //存放不同类型的url集合
@@ -86,6 +87,7 @@ public class News163Spider {
 
             //保存数据到数据库
             newsDao.saveBeans(news);
+
 
             //将保存完之后将url地址存入redis中
             jedis = JedisUtils.getJedis();

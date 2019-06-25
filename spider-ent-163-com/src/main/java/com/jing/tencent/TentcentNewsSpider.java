@@ -104,11 +104,14 @@ public class TentcentNewsSpider {
                 continue;
             }
 
+
             System.out.println(news.getDocurl());
             System.out.println(news);
             newsDao.saveBeans(news);
             //保存数据后将已经爬取过的url存入redis中
             jedis.sadd("tencent-news", news.getDocurl());
+
+
         }
         jedis.close();
     }

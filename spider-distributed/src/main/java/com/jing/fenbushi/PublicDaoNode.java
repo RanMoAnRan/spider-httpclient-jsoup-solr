@@ -18,6 +18,8 @@ import java.util.List;
 public class PublicDaoNode {
     private static NewsDao newsDao = new NewsDao();
 
+    private static KafkaSpiderProducer kafkaSpiderProducer = new KafkaSpiderProducer();
+
     public static void main(String[] args) {
         Gson gson = new Gson();
 
@@ -45,6 +47,10 @@ public class PublicDaoNode {
 
             //将保存完之后将url地址存入redis中
             jedis.sadd("bigData:spider:docurl", news.getDocurl());
+
+
+            //保存到数据库的同时,将新闻数据保存到kafka集群中: topic: newsjson
+            kafkaSpiderProducer.sendNewsJson(newsjson);
 
         }
         jedis.close();

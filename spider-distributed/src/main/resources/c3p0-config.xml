@@ -4,9 +4,9 @@
     <default-config>
         <!--  1. 数据库的连接参数 -->
         <property name="driverClass">com.mysql.jdbc.Driver</property>
-        <property name="jdbcUrl">jdbc:mysql://192.168.72.141:3306/jdbctest?characterEncoding=UTF-8</property>
+        <property name="jdbcUrl">jdbc:mysql://192.168.72.141:3306/gossip_yun13?characterEncoding=UTF-8</property>
         <property name="user">root</property>
-        <property name="password">root</property>
+        <property name="password">123456</property>
 
         <!-- 2. 连接池参数 -->
         <!--初始连接数-->

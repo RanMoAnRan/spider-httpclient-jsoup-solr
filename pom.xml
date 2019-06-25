@@ -15,6 +15,11 @@
         <module>search-lucene</module>
         <module>search-solr</module>
         <module>search-solrcloud</module>
+        <module>kafka-producer</module>
+        <module>kafka-consumer</module>
+        <module>spring-kafka-producer</module>
+        <module>spring-kafka-consumer</module>
+        <module>storm-wordcount</module>
     </modules>
 
 </project>
